@@ -37,16 +37,16 @@ While declaring a condition we have to take care of three parameters which are -
 ```
 responses:
 	utter_message:
-	-  condition:
+	- condition:
 		-  type: slot
 		   name: set_alarm
 		   value: true
-	   text: "Alarm at 6"
-	-  condition:
-		-  type: slot
-		   name: set_alarm
-		   value: false
-	   text: "No alarm"
+	  text: "Alarm at 6"
+	- condition:
+		- type: slot
+		  name: set_alarm
+		  value: false
+	  text: "No alarm"
 		  
 ```
 After reading the values from the slot, there is a check for CRV condition and whichever condition is satisfied, accordingly the response becomes available for usage by Rasa assistant. We can also simply understand it using a flow diagram. 
@@ -69,16 +69,16 @@ Well, if that is the case then Rasa will choose one satisfied CRV randomly and d
 ```
 responses:
 	utter_message:
-		-  condition:
-			-  type: slot
-			   name: set_alarm
-			   value: true
-		   text: "Hi, You have alarm set today.
-		-  condition:
-			-  type: slot
-			   name: set_meeting
-			   value: true
-		   text: "Hi, You have a meeting set for today.
+		- condition:
+			- type: slot
+			  name: set_alarm
+			  value: true
+		  text: "Hi, You have alarm set today.
+		- condition:
+			- type: slot
+			  name: set_meeting
+			  value: true
+		  text: "Hi, You have a meeting set for today.
 	utter_birthday_remind:
 		   text: "Hi, today's your friend's birthday! Don't forget to wish!"
 ```
