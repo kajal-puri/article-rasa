@@ -10,17 +10,17 @@ One of the key elements of the assistant is the **Response** section *domain.yml
 ```
 responses:
   utter_message:
-  - text: "Hello, How can I help you?"
+  	- text: "Hello, How can I help you?"
 ```
 
 We can also add multiple responses to one particular action from which then Rasa would randomly choose a response and display it to the user. These multiple responses to one action are called **response variations**. One example is as follows : 
 ```
 responses:
   utter_message:
-	  - text: "Hello, How can I help you?"
-	  - text: "Hi there, What can I do for you?"
-	  - text: "Hola, How may I assist you?"
-	  - text: "Hey, How can I make things better for you?"
+  	- text: "Hello, How can I help you?"
+	- text: "Hi there, What can I do for you?"
+	- text: "Hola, How may I assist you?"
+	- text: "Hey, How can I make things better for you?"
 ```
 We know what you might be thinking now 
  > What if I want to display one specific response only when a certain condition(s) is satisfied? 
@@ -37,16 +37,16 @@ While declaring a condition we have to take care of three parameters which are -
 ```
 responses:
 	utter_message:
-		-  condition:
-			-  type: slot
-			   name: set_alarm
-			   value: true
-		   text: "Alarm at 6"
-		-  condition:
-			-  type: slot
-			   name: set_alarm
-			   value: false
-		   text: "No alarm"
+	-  condition:
+		-  type: slot
+		   name: set_alarm
+		   value: true
+	   text: "Alarm at 6"
+	-  condition:
+		-  type: slot
+		   name: set_alarm
+		   value: false
+	   text: "No alarm"
 		  
 ```
 After reading the values from the slot, there is a check for CRV condition and whichever condition is satisfied, accordingly the response becomes available for usage by Rasa assistant. We can also simply understand it using a flow diagram. 
