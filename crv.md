@@ -24,8 +24,10 @@ responses:
 ```
 We know what you might be thinking now 
  > What if I want to display one specific response only when a certain condition(s) is satisfied? 
- > <center><img src="https://media.giphy.com/media/3oriffQefJKrzRsqQM/giphy.gif"></center></img>
- > 
+ <p align="center">
+  <img src="https://media.giphy.com/media/3oriffQefJKrzRsqQM/giphy.gif">
+</p></img>
+
 Well, that’s exactly what **conditional response variations** are for or as we call it CRV. A CRV is a general response variation with a specific condition applied to it. 
 
 While declaring a condition we have to take care of three parameters which are - `type`, `name` and `value`. 
@@ -57,7 +59,9 @@ C --> E[No alarm]
 ```
 Now the question arises is -
 > But what if there are multiple CRVs with satisfied constraints then how will assistant decide the response?
-> <center><img src="https://media.giphy.com/media/3o6ZsXOlOPsucbyyR2/giphy.gif"></center></img>
+<p align="center">
+  <img src="https://media.giphy.com/media/3o6ZsXOlOPsucbyyR2/giphy.gif">
+</p></img>
 
  
 Well, if that is the case then Rasa will choose one satisfied CRV randomly and display it, just like shown in the following example
